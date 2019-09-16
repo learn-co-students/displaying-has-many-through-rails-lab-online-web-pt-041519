@@ -1,0 +1,4 @@
+<% @patient.appointments.each do |app| %>
+  <%= "#{app.appointment_datetime.to_date.to_formatted_s(:long)} at #{app.appointment_datetime.to_s(:time)}" %>
+  <%= link_to app.doctor.name, doctor_path(app.doctor) %>
+<% end %>
