@@ -1,0 +1,8 @@
+<% @doctors.each do |doctor| %>
+    <h2><%= link_to doctor.name, doctor_path(doctor) %></h2>
+    <% unless doctor.appointment_count > 1 %>
+        <%= "Has #{doctor.appointment_count} appointment." %>
+    <% else %>
+        <%= "Has #{doctor.appointment_count} appointments." %>
+    <% end %><br>
+<% end %>
