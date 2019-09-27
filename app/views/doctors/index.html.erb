@@ -1,0 +1,4 @@
+<% @doctors.each do |d| %>
+  <%= link_to d.name, doctor_path(d) %> -
+  <%= pluralize(d.patient_count, 'patient') %><br>
+<% end %>
