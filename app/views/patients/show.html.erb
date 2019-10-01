@@ -1,0 +1,10 @@
+<h2><%=@patient.name %> </h2>
+<p>
+Age: <%=@patient.age %>
+</p>
+<ul>
+Appointments: <%=@patient.appointments.map do |a| %>
+Doctor: <%=link_to a.doctor.name, doctor_path(a.doctor)%>
+Time: <%=a.formatted_time%>
+<%end%>
+</ul>

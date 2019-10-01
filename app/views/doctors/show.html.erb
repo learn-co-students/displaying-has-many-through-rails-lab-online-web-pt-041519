@@ -1,0 +1,9 @@
+<h2><%=link_to @doctor.name, doctor_path(@doctor) %> </h2>
+<p>
+Department: <%=@doctor.department %>
+</p>
+
+Appointments: <%=@doctor.appointments.map do |a| %><br>Patient: <%=link_to a.patient.name, patient_path(a.patient)%><br>Date: <%=a.formatted_time%><%end%>
+
+
+ 
