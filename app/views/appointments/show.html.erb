@@ -1,0 +1,4 @@
+<h2>Appointment</h2>
+<h3> <%= @app.appointment_datetime.strftime("%m/%d/%Y at %I:%M%p") %></h3>
+<h4>Doctor: <%= link_to @app.doctor.name, doctor_path(@app.doctor) %></h4>
+<h4>Patient: <%= link_to @app.patient.name, patient_path(@app.patient) %></h4>
